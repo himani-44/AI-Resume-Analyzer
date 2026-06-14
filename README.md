@@ -2,6 +2,12 @@
 
 An AI-powered Resume Analyzer that compares resumes against job descriptions using NLP, embeddings, semantic similarity, and ATS scoring.
 
+## Live Demo
+
+Deployed Application:
+
+https://ai-resume-analyzer-kmqqsvs26m3cyqlnd53wxx.streamlit.app/
+
 ## Features
 
 * Resume PDF Parsing
@@ -23,6 +29,7 @@ An AI-powered Resume Analyzer that compares resumes against job descriptions usi
 * Streamlit
 * Sentence Transformers
 * Scikit-Learn
+* spaCy
 * PyMuPDF
 * NLP
 * Embeddings
@@ -36,19 +43,28 @@ An AI-powered Resume Analyzer that compares resumes against job descriptions usi
 4. Calculate skill match percentage.
 5. Calculate semantic similarity using embeddings.
 6. Compute ATS Score.
-7. Rank resumes and recommend the best match.
+7. Rank resumes and recommend the best resume.
 
 ## ATS Score Formula
 
 ATS Score = (Skill Match Percentage × 0.6) + (Semantic Similarity × 0.4)
 
+## Project Architecture
+
+* parser.py → Extracts text from PDF resumes
+* skills.py → Skill extraction and alias mapping
+* similarity.py → Skill matching logic
+* semantic_similarity.py → Embeddings and cosine similarity
+* feedback.py → ATS feedback generation
+* app.py → Streamlit user interface
+
 ## Future Improvements
 
-* Advanced NLP Skill Extraction
-* Vector Database Integration
-* LLM-based Feedback Generation
-* Resume Improvement Suggestions
-* Cloud Deployment
+* LLM-based feedback generation
+* Resume improvement suggestions
+* Vector database integration
+* Advanced NLP skill extraction
+* Cloud-scale deployment
 
 ## Author
 
